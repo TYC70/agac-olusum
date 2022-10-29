@@ -4,10 +4,17 @@ function App() {
   return (
     <div className="App">
       <div>
-        <a href='https://github.com/TYC70/agac-olusum.git' target="_blank" className='github-link'>
+        <div>
+          <a href='https://github.com/TYC70/agac-olusum.git' target="_blank" className='github-link'>
           OPEN GITHUB REPOSITORY
-        </a>
+          </a>
+        </div>
+        <span>Welcome to the Tree View App</span>
+        <div>
+          <button>MENU</button>
+        </div>
       </div>
+
     </div>
   );
 }
