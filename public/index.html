@@ -30,13 +30,29 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <a href="https://github.com/TYC70/agac-olusum.git" target="_blank">OPEN GITHUB REPOSITORY</a>
-    <h1>Welcome to the Tree View App</h1>
+    <h1 id="welcome">Welcome to the Tree View App</h1>
     <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">MENU</button>
     <div id="myDropdown" class="dropdown-content">
-      <a href="#addnewtree">Add New Tree</a>
+      <a href="#addnewtree" onclick="addTree()">Add New Tree</a>
       <a href="#savetreeview">Save Tree View</a>
       <a href="#clearscreenandlocaldata">Clear Screen And Local Data</a>
+  </div>
+  <div>
+    <div>
+      <input className="name-area" type="text" placeholder="Name" />
+    </div>
+    <input className="point-area" type="number" defaultValue="0">Self Point</input>
+    <p>Total Point: </p>
+    <button onclick="addTree()">X</button>
+  </div>
+  <div id="addtree">
+    <div>
+      <input className="name-area" type="text" placeholder="Name" />
+    </div>
+    <input className="point-area" type="number" defaultValue="0">Self Point</input>
+    <p>Total Point: </p>
+    <button>X</button>
   </div>
 </div>
 
@@ -46,6 +62,10 @@ toggle between hiding and showing the dropdown content */
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
+
+function addTree() {
+  document.getElementById("addtree").classList.toggle("hide");
+} 
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
